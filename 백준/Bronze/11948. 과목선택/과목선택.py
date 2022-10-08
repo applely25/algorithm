@@ -1,0 +1,10 @@
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+e = int(input())
+f = int(input())
+list1 = sorted([a,b,c,d])
+list2 = sorted([e,f])
+
+print(list1[1] + list1[2] + list1[3] + list2[1])
