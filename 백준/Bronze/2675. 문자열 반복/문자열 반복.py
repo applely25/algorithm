@@ -1,7 +1,6 @@
-n = int(input())
-for i in range(n):
-    r,s = input().split()
-    str = list(s)
-    for j in str:
-        print(j*int(r), end="")
-    print()
+for i in range(int(input())):
+  n, s = input().split(" ");
+  arr = ""
+  for j in list(s):
+    arr += j*int(n)
+  print(arr)
