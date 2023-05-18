@@ -1,6 +1,7 @@
 function solution(survey, choices) {
     const obj = { R:0, T:0, C:0, F:0, J:0, M:0, A:0, N:0};
     let answer = ''
+    const resultArr = [['R','T'],['C','F'],['J','M'],['A','N']];
     
     survey.map((sur, i)=>{
         const arr = sur.split("");
@@ -9,14 +10,7 @@ function solution(survey, choices) {
         else obj[arr[1]] += score-4;
     })  
     
-    if(obj['R'] >= obj['T']) answer+='R'
-    else answer+='T'
-    if(obj['C'] >= obj['F']) answer+='C'
-    else answer+='F'
-    if(obj['J'] >= obj['M']) answer+='J'
-    else answer+='M'
-    if(obj['A'] >= obj['N']) answer+='A'
-    else answer+='N'
+    resultArr.map(d => answer += obj[d[0]] >= obj[d[1]] ? d[0]: d[1] )
     
     return answer
 }
