@@ -1,0 +1,1 @@
+const solution = n_str => String(Number(n_str))
