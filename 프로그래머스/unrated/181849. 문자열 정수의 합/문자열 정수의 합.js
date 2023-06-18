@@ -1,0 +1,1 @@
+const solution = num_str => num_str.split("").reduce((a,b)=>Number(a)+Number(b), 0)
