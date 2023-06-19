@@ -1,8 +1,6 @@
 function solution(A,B){
-    let add = 0
-    A = A.sort((a,b) => a-b)
-    B = B.sort((a,b) => b-a)
+    A.sort((a,b) => a-b)
+    B.sort((a,b) => b-a)
     
-    A.map((n,i) => add += n * B[i])
-    return add
+    return A.reduce((a,b,i) => a+(b*B[i]), 0)
 }
