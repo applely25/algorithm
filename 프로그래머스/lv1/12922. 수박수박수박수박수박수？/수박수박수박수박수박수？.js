@@ -1,1 +1,1 @@
-const solution = n => "수박".repeat(n).substr(0,n)
+const solution = n => "수박".repeat(Math.ceil(n/2)).substr(0,n)
