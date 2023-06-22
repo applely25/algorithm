@@ -1,0 +1,1 @@
+const solution = n => new Array(Math.round(n/2)).fill("수박").join("").substr(0,n)
