@@ -1,3 +1,1 @@
-function solution(s) {
-    return s.length%2 ? [...s][~~(s.length/2)] : [...s].splice(s.length/2-1,2).join("")
-}
+const solution = s => s.length%2 ? s.substr(~~(s.length/2),1) : s.substr(~~(s.length/2)-1,2)
