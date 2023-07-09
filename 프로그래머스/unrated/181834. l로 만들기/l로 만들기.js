@@ -1,1 +1,1 @@
-const solution = myString => myString.replace(/[a-l]/g, "l")
+const solution = myString => myString.replace(/[a-k]/g, "l")
