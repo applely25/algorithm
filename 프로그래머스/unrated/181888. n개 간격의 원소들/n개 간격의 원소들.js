@@ -1,1 +1,1 @@
-const solution = (num_list, n) => num_list.filter((v,i)=> i%n === 0)
+const solution = (num_list, n) => num_list.filter((_,i)=> i%n === 0)
