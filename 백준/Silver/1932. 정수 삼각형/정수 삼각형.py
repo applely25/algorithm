@@ -1,16 +1,12 @@
-n = int(input())
-a = []
-d = [[0]*(i+1) for i in range(n)]
+d = [[0]*(i+1) for i in range(int(input()))]
 
-for _ in range(n):
-  a.append(list(map(int, input().split(" "))))
+d[0][0] = int(input())
 
-d[0][0] = a[0][0]
-
-for i in range(1, n):
-  d[i][0] = d[i-1][0]+a[i][0]
-  d[i][i] = d[i-1][i-1]+a[i][i]
+for i in range(1, len(d)):
+  a = list(map(int, input().split(" ")))
+  d[i][0] = d[i-1][0]+a[0]
+  d[i][i] = d[i-1][i-1]+a[i]
   for j in range(1,i):
-    d[i][j] = max(d[i-1][j-1], d[i-1][j]) + a[i][j]
+    d[i][j] = max(d[i-1][j-1], d[i-1][j]) + a[j]
 
-print(max(d[n-1]))
+print(max(d[-1]))
